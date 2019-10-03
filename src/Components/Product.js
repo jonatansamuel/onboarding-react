@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import { red } from '@material-ui/core/colors';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { shadows } from '@material-ui/system';
 import silver from '../images/silver.png';
 import gold from '../images/gold.png';
 import platinum from '../images/platinum.png';

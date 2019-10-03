@@ -7,7 +7,6 @@ import Homepage from './Components/Homepage'
 import Personal from './Components/Personal'
 import Company from './Components/Company'
 import Pay from './Components/Pay'
-import Stepper from './Components/Stepper'
 import Welcome from './Components/Welcome'
 import Product from './Components/Product'
 import Cart from './Components/Cart'
@@ -18,14 +17,12 @@ class App extends Component {
     return (
       <div>
             <Header />
-            <Stepper />
             <Router>
                 <Switch>
                 <Route exact path="/" component= { Homepage }/>
                     <Route exact path="/personal" component= { Personal }/>
                     <Route exact path="/Company" component= { Company }/>
                     <Route exact path="/Pay" component= { Pay }/>
-                    <Route exact path="/Stepper" component= { Stepper }/>
                     <Route exact path="/Welcome" component= { Welcome }/>
                     <Route exact path="/Product" component= { Product }/>
                     <Route exact path="/Cart" component= { Cart }/>
