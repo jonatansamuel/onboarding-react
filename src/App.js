@@ -4,13 +4,11 @@ import './Components/App.css';
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Homepage from './Components/Homepage'
-import Personal from './Components/Personal'
-import Company from './Components/Company'
-import Pay from './Components/Pay'
 import Welcome from './Components/Welcome'
 import Product from './Components/Product'
 import Cart from './Components/Cart'
-import Newpractice from './Components/Newpractice'
+import Signup from './Components/Signup'
+import Validatorpractice from './Components/Validatorpractice'
 
 class App extends Component {
   render() {
@@ -20,13 +18,11 @@ class App extends Component {
             <Router>
                 <Switch>
                 <Route exact path="/" component= { Homepage }/>
-                    <Route exact path="/personal" component= { Personal }/>
-                    <Route exact path="/Company" component= { Company }/>
-                    <Route exact path="/Pay" component= { Pay }/>
                     <Route exact path="/Welcome" component= { Welcome }/>
                     <Route exact path="/Product" component= { Product }/>
                     <Route exact path="/Cart" component= { Cart }/>
-                    <Route exact path="/Newpractice" component= { Newpractice }/>
+                    <Route exact path="/Signup" component= { Signup }/>
+                    <Route exact path="/Validatorpractice" component= { Validatorpractice }/>
                 </Switch>
             </Router>
             <Footer />

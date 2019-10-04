@@ -58,7 +58,6 @@ export default function RecipeReviewCard() {
     container
     spacing={0}
     direction="horizontal"
-    flexGrow="1"
     alignItems="w"
     justify="center">
     <Card className={classes.card}>
@@ -210,7 +209,7 @@ export default function RecipeReviewCard() {
         color="primary"
         style = {{ width:400 }}
         className={classes.button}>
-        Create Account
+        Get Started
     </Button>
 </center>
 </Link>

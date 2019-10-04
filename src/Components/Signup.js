@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles,Grid } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -9,7 +10,6 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
-import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import Personal from './Personal';
 import Company from './Company';
@@ -19,9 +19,9 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
+      {/* <Link color="inherit" href="https://material-ui.com/">
         Your Website
-      </Link>{' '}
+      </Link>{' '} */}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+const steps = ['Personal Information', 'Company Information', 'Payment Method'];
 
 function getStepContent(step) {
   switch (step) {
@@ -93,19 +93,27 @@ export default function Checkout() {
   };
 
   return (
+<Grid
+    container
+    spacing={0}
+    direction="column"
+    alignItems="center"
+    justify="center"
+    >
+
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="absolute" color="default" className={classes.appBar}>
+      {/* <AppBar position="absolute" color="default" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
             Company name
           </Typography>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
       <main className={classes.layout}>
         <Paper className={classes.paper}>
           <Typography component="h1" variant="h4" align="center">
-            Checkout
+            MK Decision
           </Typography>
           <Stepper activeStep={activeStep} className={classes.stepper}>
             {steps.map(label => (
@@ -118,12 +126,22 @@ export default function Checkout() {
             {activeStep === steps.length ? (
               <React.Fragment>
                 <Typography variant="h5" gutterBottom>
-                  Thank you for your order.
+                  Welcome to MK Decision.
                 </Typography>
                 <Typography variant="subtitle1">
-                  Your order number is #2001539. We have emailed your order confirmation, and will
-                  send you an update when your order has shipped.
+                  Yourem ID numbis iosum #2001539.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis in excepturi enim molestiae! Reprehenderit qui, expedita eligendi optio eni.
                 </Typography>
+                <center>
+            <Link to ="/Product">
+              <Button
+                variant="contained"
+                color="primary"
+                style = {{ width:400 }}
+                className={classes.button}>
+                  Continue on to Products
+              </Button>
+            </Link>
+            </center>
               </React.Fragment>
             ) : (
               <React.Fragment>
@@ -140,7 +158,7 @@ export default function Checkout() {
                     onClick={handleNext}
                     className={classes.button}
                   >
-                    {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+                    {activeStep === steps.length - 1 ? 'Submit' : 'Next'}
                   </Button>
                 </div>
               </React.Fragment>
@@ -150,5 +168,6 @@ export default function Checkout() {
         <Copyright />
       </main>
     </React.Fragment>
+    </Grid>
   );
 }

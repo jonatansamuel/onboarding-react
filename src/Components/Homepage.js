@@ -25,16 +25,16 @@ export default function ContainedButtons() {
     alignItems="center"
     justify="center"
     >
-    <Link to ="/Personal">
-      <Button
-      variant="contained"
-      color="primary"
-      style = {{ width:400 }}
-      className={classes.button}>
-        Create Account
-      </Button>
+      <Link to ="/Signup">
+        <Button
+        variant="contained"
+        color="primary"
+        style = {{ width:400 }}
+        className={classes.button}>
+          Create Account
+        </Button>
       </Link>
-      </Grid>
+    </Grid>
 
   );
 }

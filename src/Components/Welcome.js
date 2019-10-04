@@ -32,7 +32,7 @@ export default function PaperSheet() {
             color="primary"
             style = {{ width:400 }}
             className={classes.button}>
-              Create Account
+              Continue on to Products.
             </Button>
             </Link>
             </Grid>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { TextField,Button,Grid } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { TextField,FormControl,FormHelperText,Input,InputLabel } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -18,15 +17,12 @@ export default function CustomizedInputs() {
 
   return (
     <form className={classes.root} noValidate>
-    <Grid
-    container
-    spacing={0}
-    direction="column"
-    alignItems="center"
-    justify="center"
-    >
 
     <h1>Company Information</h1>
+    <FormControl>
+  
+  <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
+</FormControl>
             <TextField
               className={classes.margin}
               label="Company"
@@ -34,6 +30,7 @@ export default function CustomizedInputs() {
               style = {{ width:800 }}
               id="mui-theme-provider-outlined-input"
             />
+            <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
 
             <TextField
               className={classes.margin}
@@ -98,18 +95,6 @@ export default function CustomizedInputs() {
               style = {{ width:800 }}
               id="mui-theme-provider-outlined-input"
             />
-
-            <center>
-            <Link to="/Pay">
-            <Button variant="contained"
-            color="primary"
-            style = {{ width:300 }}
-            className={classes.button}>
-              Continue
-            </Button>
-            </Link>
-            </center>
-              </Grid>
     </form>
   );
 }
