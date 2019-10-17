@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles,Chip,Button,Grid,Divider,Typography }
   from '@material-ui/core';
+import { Link } from 'react-router-dom';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -51,12 +53,7 @@ export default function MiddleDividers() {
         <Typography gutterBottom variant="body1">
           Select type
         </Typography>
-        <div>
-          <Chip className={classes.chip} label="Extra Soft" />
-          <Chip className={classes.chip} color="primary" label="Soft" />
-          <Chip className={classes.chip} label="Medium" />
-          <Chip className={classes.chip} label="Hard" />
-        </div>
+      
       </div>
       <div className={classes.section3}>
         <Button color="primary">Add to cart</Button>
@@ -86,12 +83,6 @@ export default function MiddleDividers() {
         <Typography gutterBottom variant="body1">
           Select type
         </Typography>
-        <div>
-          <Chip className={classes.chip} label="Extra Soft" />
-          <Chip className={classes.chip} color="primary" label="Soft" />
-          <Chip className={classes.chip} label="Medium" />
-          <Chip className={classes.chip} label="Hard" />
-        </div>
       </div>
       <div className={classes.section3}>
         <Button color="primary">Add to cart</Button>
@@ -121,15 +112,11 @@ export default function MiddleDividers() {
         <Typography gutterBottom variant="body1">
           Select type
         </Typography>
-        <div>
-          <Chip className={classes.chip} label="Extra Soft" />
-          <Chip className={classes.chip} color="primary" label="Soft" />
-          <Chip className={classes.chip} label="Medium" />
-          <Chip className={classes.chip} label="Hard" />
-        </div>
       </div>
       <div className={classes.section3}>
-        <Button color="primary">Add to cart</Button>
+        <Link to ="/OrderConfirm">
+        <Button color="primary">Place your order.</Button>
+        </Link>
       </div>
     </div>
   );

@@ -148,8 +148,7 @@ export default function Checkout() {
                 {getStepContent(activeStep)}
                 <div className={classes.buttons}>
                   {activeStep !== 0 && (
-                    <Button onClick={handleBack} className={classes.button}>
-                      Back
+                    <Button>
                     </Button>
                   )}
                   <Button

@@ -6,9 +6,12 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
+    borderRadius: '60',
   },
   margin: {
     margin: theme.spacing(1),
+    borderRadius: '80',
+   
   },
 }));
 
@@ -23,13 +26,15 @@ export default function CustomizedInputs() {
   
   <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
 </FormControl>
-            <TextField
+        <div className="TextField-without-border-radius">
+            <TextField 
               className={classes.margin}
               label="Company"
               variant="outlined"
-              style = {{ width:800 }}
-              id="mui-theme-provider-outlined-input"
+              style = {{ width:300, borderRadius:60}}
+              id="TextField-without-border-radius"
             />
+            </div>
             <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
 
             <TextField

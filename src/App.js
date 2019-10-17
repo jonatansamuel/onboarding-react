@@ -9,6 +9,7 @@ import Product from './Components/Product'
 import Cart from './Components/Cart'
 import Signup from './Components/Signup'
 import Validatorpractice from './Components/Validatorpractice'
+import OrderConfirm from './Components/OrderConfirm'
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
                     <Route exact path="/Product" component= { Product }/>
                     <Route exact path="/Cart" component= { Cart }/>
                     <Route exact path="/Signup" component= { Signup }/>
+                    <Route exact path="/OrderConfirm" component= { OrderConfirm }/>
                     <Route exact path="/Validatorpractice" component= { Validatorpractice }/>
                 </Switch>
             </Router>
